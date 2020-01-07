@@ -208,9 +208,9 @@ uint16_t SIM800L::doPost(const char* url, const char* contentType, const char* p
         // Load the next char
         recvBuffer[i] = stream->read();
         // If the character is CR or LF, ignore it (it's probably part of the module communication schema)
-        if((recvBuffer[i] == '\r') || (recvBuffer[i] == '\n')) {
-          i--;
-        }
+        // if((recvBuffer[i] == '\r') || (recvBuffer[i] == '\n')) {
+        //   i--;
+        // }
       }
     }
   
@@ -318,9 +318,9 @@ uint16_t SIM800L::doGet(const char* url, uint16_t serverReadTimeoutMs) {
         // Load the next char
         recvBuffer[i] = stream->read();
         // If the character is CR or LF, ignore it (it's probably part of the module communication schema)
-        if((recvBuffer[i] == '\r') || (recvBuffer[i] == '\n')) {
-          i--;
-        }
+        // if((recvBuffer[i] == '\r') || (recvBuffer[i] == '\n')) {
+        //   i--;
+        // }
       }
     }
   
